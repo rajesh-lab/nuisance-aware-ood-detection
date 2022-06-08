@@ -1,0 +1,52 @@
+method: grid
+metric:
+  goal: maximize
+  name: Val acc
+parameters:
+  cosine:
+    values:
+      - 1
+  data_label_correlation:
+    values:
+      - 0.9
+      - 0.7
+      - 0.5
+  epochs:
+    values:
+      - 30
+  in_dataset:
+    values:
+      - cmnist
+  joint_indep:
+    values:
+      - 0
+  lr:
+    values:
+      - 0.0001
+  manualSeed:
+    values:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+  model_arch:
+    values:
+      - simple
+  momentum:
+    values:
+      - 0.9
+  optimizer:
+    values:
+      - adam
+  project_name:
+    values:
+      - cm_erm
+  reweight:
+    values:
+      - 0
+  weight_decay:
+    values:
+      - 0.005
+program: main.py
+project: nurd-ood-cm_erm

@@ -1,0 +1,73 @@
+method: grid
+metric:
+  goal: maximize
+  name: Val rw_acc
+parameters:
+  balance_correlation_sizes:
+    values:
+      - 1
+  cosine:
+    values:
+      - 1
+  critic_epochs:
+    values:
+      - 2
+  data_label_correlation:
+    values:
+      - 0.9
+      - 0.7
+      - 0.5
+  epochs:
+    values:
+      - 100
+  exact:
+    values:
+      - 1
+  in_dataset:
+    values:
+      - celeba
+  joint_indep:
+    values:
+      - 0
+  lr:
+    values:
+      - 0.0001
+  manualSeed:
+    values:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+  model_arch:
+    values:
+      - resnet18
+  momentum:
+    values:
+      - 0.9
+  optimizer:
+    values:
+      - adam
+  project_name:
+    values:
+      - celeba_erm
+  reweight:
+    values:
+      - 0
+  reweight_epochs:
+    values:
+      - 50
+  reweight_val_only:
+    values:
+      - 0
+  undersample:
+    values:
+      - 0
+  undersample_val_only:
+    values:
+      - 0
+  weight_decay:
+    values:
+      - 0.005
+program: main.py
+project: nurd-ood-celeba_erm
